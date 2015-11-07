@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<GridPane fx:controller="byt.money.modelmmi.internal.controller.ModelMmiController" 
+          xmlns:fx="http://javafx.com/fxml" alignment="TOP_LEFT" hgap="2" vgap="2">
+    <padding>
+        <Insets top="2" right="2" bottom="2" left="2"/>
+    </padding>
+
+    <Label 
+        fx:id="categoryLabel"
+        GridPane.columnIndex="0" GridPane.rowIndex="0"
+        minHeight="30" maxHeight="30" minWidth="150" maxWidth="150" prefHeight="30" prefWidth="150"/>
+    <ComboBox 
+        fx:id="categoryComboBox"
+        GridPane.columnIndex="1" GridPane.rowIndex="0"
+        minHeight="30" maxHeight="30" minWidth="150" maxWidth="150" prefHeight="30" prefWidth="150"/>
+    <Label 
+        fx:id="ammountLabel"
+        GridPane.columnIndex="0" GridPane.rowIndex="1"
+        minHeight="30" maxHeight="30" minWidth="150" maxWidth="150" prefHeight="30" prefWidth="150"/>
+    <TextField 
+        fx:id="ammountField" 
+        GridPane.columnIndex="1" GridPane.rowIndex="1" 
+        minHeight="30" maxHeight="30" minWidth="150" maxWidth="150" prefHeight="30" prefWidth="150" 
+        onTextChange="#validateAmmount"  /> 
+    <Label 
+        fx:id="nameLabel"
+        GridPane.columnIndex="0" GridPane.rowIndex="2"
+        minHeight="30" maxHeight="30" minWidth="150" maxWidth="150" prefHeight="30" prefWidth="150" />
+    <TextField 
+        fx:id="nameField"
+        GridPane.columnIndex="1" GridPane.rowIndex="2" 
+        minHeight="30" maxHeight="30" minWidth="150" maxWidth="150" prefHeight="30" prefWidth="150" /> 
+    <Label 
+        fx:id="detailsLabel"
+        GridPane.columnIndex="0" GridPane.rowIndex="3"
+        minHeight="30" maxHeight="30" minWidth="150" maxWidth="150" prefHeight="30" prefWidth="150" />
+    <TextField 
+        fx:id="detailsField"
+        GridPane.columnIndex="1" GridPane.rowIndex="3" 
+        minHeight="30" maxHeight="30" minWidth="150" maxWidth="150" prefHeight="30" prefWidth="150"/>
+    <Label 
+        fx:id="dateLabel"
+        GridPane.columnIndex="0" GridPane.rowIndex="4"
+        minHeight="30" maxHeight="30" minWidth="150" maxWidth="150" prefHeight="30" prefWidth="150"/>
+    <DatePicker 
+        fx:id="datePicker"
+        GridPane.columnIndex="1" GridPane.rowIndex="4"
+        minHeight="30" maxHeight="30"  minWidth="150" maxWidth="150" prefHeight="30" prefWidth="150" />  
+    <Label 
+        fx:id = "messageLabel"
+        GridPane.columnIndex="0" GridPane.rowIndex="5" GridPane.fillWidth="true" />
+    <Button 
+        fx:id = "acceptButton"
+        GridPane.columnIndex="1" GridPane.rowIndex="6" GridPane.halignment="RIGHT" 
+        minHeight="30" maxHeight="30"  minWidth="100" maxWidth="100" prefHeight="30" prefWidth="100"
+        onAction="#acceptButtonAction"/>
+
+</GridPane>
