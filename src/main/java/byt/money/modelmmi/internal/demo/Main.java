@@ -1,7 +1,8 @@
-package byt.money.modelmmi.internal.testmain;
+package byt.money.modelmmi.internal.demo;
 
 import byt.money.modelmmi.ModelMmi;
 import javafx.application.Application;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
@@ -12,15 +13,15 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        ModelMmi addingMmi = new ModelMmi();
-        addingMmi.start();
-        primaryStage.setTitle(addingMmi.getName());
-        primaryStage.setScene(addingMmi.getScene());
-        primaryStage.show();
+//        ModelMmi addingMmi = new ModelMmi();
+//        addingMmi.start();
+//        primaryStage.setTitle(addingMmi.getName());
+//        primaryStage.setScene(addingMmi.getScene());
+//        primaryStage.show();
     }
 
     public static void main(String[] args) {
-        launch(args);
+//        launch(args);
     }
 
 }

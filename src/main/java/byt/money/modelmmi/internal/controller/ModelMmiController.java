@@ -46,7 +46,16 @@ public class ModelMmiController implements Initializable {
 
     @FXML
     private void acceptButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
+        String category = categoryComboBox.getValue().toString();
+        String name = nameField.getText();
+        int ammount = Integer.valueOf(ammountField.getText());
+        LocalDate date = datePicker.getValue();
+        if(date == null){
+            date = LocalDate.now();
+        }
+        String details = detailsField.getText();
+        //przekazać to dalej do DB
+        new Model(category, name, ammount, date, details);
     }
 
     @FXML
@@ -54,10 +63,18 @@ public class ModelMmiController implements Initializable {
         boolean valid = ammountField.getText().matches(AMMOUNT_VALIDATOR);
         acceptButton.setDisable(!valid);
     }
-
+    
+    @FXML
+    private void validateName(Event event) {
+        String name = nameField.getText();
+        boolean valid = name != null && !name.isEmpty();
+        acceptButton.setDisable(!valid);
+    }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         setCategories();
+        //tu ma być mockowy obiekt
         update(new Model("Inflow", "Wypłata", 5000, LocalDate.now(), "Premia"));
         localize();
     }
